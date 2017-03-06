@@ -22,7 +22,7 @@ public class HelloController {
 	public Demo getDemo(){
 		Demo demo=new Demo();
 		demo.setId(1);
-		demo.setName("干海杰");
+		demo.setName("干海杰11");
 		demo.setCreateTime(new Date());
 		demo.setRemark("备注");
 		return demo;
