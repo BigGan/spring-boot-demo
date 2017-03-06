@@ -42,17 +42,23 @@
 			<version>1.2.15</version>
 		</dependency>
  
+ 		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+           <scope>true</scope>
+		</dependency>	
   </dependencies>
   
   <!-- 节点 -->
   <build>
 		  	<plugins>
-		  			<!-- Springloader -->
+		  			<!-- Springloader 
 		  			<plugin>
 		          		<groupId>org.springframework.boot</groupId>
 		          		<artifactId>spring-boot-maven-plugin </artifactId>
 		          		<dependencies>  
-				           <!--springloaded  hot deploy -->  
+				     
 				           <dependency>  
 				               <groupId>org.springframework</groupId>  
 				               <artifactId>springloaded</artifactId>  
@@ -69,7 +75,19 @@
 				               </configuration>  
 				           </execution>  
 			       		</executions>
-					</plugin>
+					</plugin> -->
+					
+					
+					    <plugin>
+				            <groupId>org.springframework.boot</groupId>
+				            <artifactId>spring-boot-maven-plugin</artifactId>
+				            <configuration>
+				          		<!--fork :  如果没有该项配置，肯呢个devtools不会起作用，即应用不会restart -->
+				                <fork>true</fork>
+				            </configuration>
+	        			</plugin>
+					
+					
 		  	</plugins>
   </build>
   

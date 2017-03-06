@@ -13,6 +13,10 @@ public class HelloController {
 		return "hello";
 	}
 	
+	@RequestMapping("/hello2")
+	public String hello2(){
+		return "hello2";
+	}
 	
 	/**
 	 * Spring boot 默认使用的是jackson框架
